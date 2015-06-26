@@ -1,0 +1,14 @@
+PODS:
+  - NNSprite (0.1.0)
+
+DEPENDENCIES:
+  - NNSprite (from `../`)
+
+EXTERNAL SOURCES:
+  NNSprite:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NNSprite: 0de5bae57c83ef2bfcbe7287a58e7db1aa0db9d6
+
+COCOAPODS: 0.37.2
