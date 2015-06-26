@@ -1,4 +1,4 @@
-#import "CADisplayLink+DisplayObject.h"
+#import "CADisplayLink+NNSprite.h"
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-@implementation CADisplayLink (DisplayObject)
+@implementation CADisplayLink (NNSprite)
 
 static CADisplayLink* _sharedLink = nil;
 

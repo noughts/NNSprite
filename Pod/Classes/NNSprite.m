@@ -6,10 +6,10 @@
 //
 //
 
-#import "NNDisplayObject.h"
-#import "CADisplayLink+DisplayObject.h"
+#import "NNSprite.h"
+#import "CADisplayLink+NNSprite.h"
 
-@implementation NNDisplayObject{
+@implementation NNSprite{
 	void (^_onEnterFrameHandler)();
 }
 
@@ -51,7 +51,7 @@
 
 
 -(void)render:(NSNotification*)note{
-	NSLog( @"render" );
+//	NSLog( @"render" );
 	CGAffineTransform t = CGAffineTransformMakeScale(_scaleX, _scaleY);
 	t = CGAffineTransformRotate(t, _rotation * M_PI / 180.0);
 	self.transform = t;

@@ -8,7 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface CADisplayLink (DisplayObject)
+@interface CADisplayLink (NNSprite)
 
 + (CADisplayLink*)sharedLink;
 

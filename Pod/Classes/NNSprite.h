@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NNDisplayObject : UIView
+@interface NNSprite : UIView
 
 /// オブジェクトのスケール（パーセンテージ）を示します。 1.0 は縮尺 100% と同等です。
 @property CGFloat scaleX;
