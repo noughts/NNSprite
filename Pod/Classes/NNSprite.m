@@ -10,8 +10,7 @@
 #import "CADisplayLink+NNSprite.h"
 
 @implementation NNSprite{
-	void (^_onEnterFrameHandler)(NNSprite*, NSUInteger);
-	NSUInteger _onEnterFrameCount;
+	void (^_onEnterFrameHandler)(NNSprite*);
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
@@ -39,7 +38,7 @@
 
 
 /// onEnterFrameハンドラセット
--(void)setOnEnterFrameHandler:(void (^)(NNSprite* sprite, NSUInteger counter))handler{
+-(void)setOnEnterFrameHandler:(void (^)(NNSprite* sprite))handler{
 	_onEnterFrameHandler = handler;
 }
 
@@ -57,8 +56,7 @@
 	t = CGAffineTransformRotate(t, _rotation * M_PI / 180.0);
 	self.transform = t;
 	if( _onEnterFrameHandler ){
-		_onEnterFrameHandler( self, _onEnterFrameCount );
-		_onEnterFrameCount++;
+		_onEnterFrameHandler( self );
 	}
 }
 
