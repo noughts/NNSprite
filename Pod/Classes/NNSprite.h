@@ -20,7 +20,7 @@
 
 
 /// onEnterFrameハンドラセット
--(void)setOnEnterFrameHandler:(void (^)(NNSprite* sprite))handler;
+-(void)setOnEnterFrameHandler:(void (^)(NNSprite* sprite, NSUInteger counter))handler;
 
 
 

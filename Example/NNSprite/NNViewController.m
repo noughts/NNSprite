@@ -26,7 +26,8 @@
 	[_obj removeFromSuperview];
 }
 -(IBAction)onStartButtonTap:(id)sender{
-	[_obj setOnEnterFrameHandler:^(NNSprite *sprite) {
+	[_obj setOnEnterFrameHandler:^(NNSprite *sprite, NSUInteger counter) {
+		NSLog( @"%@", @(counter) );
 		sprite.scaleX += 0.01;
 		sprite.scaleY += 0.01;
 		sprite.rotation += 1;
