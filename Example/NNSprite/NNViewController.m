@@ -26,10 +26,10 @@
 	[_obj removeFromSuperview];
 }
 -(IBAction)onStartButtonTap:(id)sender{
-	[_obj setOnEnterFrameHandler:^{
-		_obj.scaleX += 0.01;
-		_obj.scaleY += 0.01;
-		_obj.rotation += 1;
+	[_obj setOnEnterFrameHandler:^(NNSprite *sprite) {
+		sprite.scaleX += 0.01;
+		sprite.scaleY += 0.01;
+		sprite.rotation += 1;
 	}];
 }
 -(IBAction)onStopButtonTap:(id)sender{

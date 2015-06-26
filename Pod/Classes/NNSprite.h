@@ -20,7 +20,7 @@
 
 
 /// onEnterFrameハンドラセット
--(void)setOnEnterFrameHandler:(void (^)())handler;
+-(void)setOnEnterFrameHandler:(void (^)(NNSprite* sprite))handler;
 
 
 
