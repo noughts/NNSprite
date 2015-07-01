@@ -24,12 +24,10 @@
 -(void)initialize{
 	_scaleX = 1;
 	_scaleY = 1;
-}
-
-
--(void)drawRect:(CGRect)rect{
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(render:) name:@"onEnterFrame" object:[CADisplayLink sharedLink]];
 }
+
+
 
 
 -(void)dealloc{
@@ -51,7 +49,7 @@
 
 
 -(void)render:(NSNotification*)note{
-//	NSLog( @"render" );
+	NSLog( @"render" );
 	CGAffineTransform t = CGAffineTransformMakeScale(_scaleX, _scaleY);
 	t = CGAffineTransformRotate(t, _rotation * M_PI / 180.0);
 	self.transform = t;
